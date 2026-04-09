@@ -1,0 +1,140 @@
+.layout-box-2 {
+    border-radius: var(--radius-20);
+    background: var(--Light_mode-Gray_Scale-100);
+    padding: var(--sp-32);
+    width: 60%;
+    margin: var(--sp-48) auto;
+}
+.layout-box-2 .headline-2 {
+    font-size: var(--fs-26);
+    font-weight: 600;
+    margin-bottom: var(--sp-32);
+}
+.layout-box-2 form label {
+    margin-bottom: var(--sp-8);
+    display: block;
+}
+.layout-box-2 form div {
+    margin-bottom: var(--sp-16);
+}
+.layout-box-2 form input {
+    outline: none;
+    width: 100%;
+    border: 0.5px solid var(--Light_mode-Gray_Scale-70);
+    padding: 12px;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+.layout-box-2 form input[readonly] {
+    background-color: var(--Light_mode-Gray_Scale-70);
+    pointer-events: none;
+}
+.layout-box-2 form input:focus {
+    border-color: var(--Light-Primary-50);
+    background: var(--Light_mode-Gray_Scale-100);
+    box-shadow: 0px 0px 2px 0px var(--Light-Primary-50);
+}
+.layout-box-2 form button {
+    margin-top: var(--sp-16);
+    border-radius: var(--radius-8);
+    background: var(--Light-Primary-50);
+    padding: var(--sp-10) var(--sp-24) var(--sp-12);
+    color: var(--Light_mode-Gray_Scale-100);
+    font-weight: 500;
+    text-transform: none;
+    font-size: var(--fs-16);
+    display: inline-flex;
+    gap: var(--sp-8);
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.layout-box-2 form .err {
+    font-size: 10px;
+    margin-top: 8px;
+    color: var(--Light-Quaternary-50); /* Placeholder for $error-color */
+}
+.layout-box-2 form .c-upload-image {
+    width: 50%;
+    display: flex;
+
+    align-items: center;
+    gap: var(--sp-24);
+    margin-bottom: var(--sp-32);
+}
+
+.layout-box-2 form .c-upload-image .c_thumb {
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: var(--sp-10);
+    width: 27%;
+    border-radius: 50%;
+}
+
+.c_thumb,
+.c_thumb > div,
+.c_thumb img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Chiều cao = chiều rộng */
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+}
+
+.layout-box-2 form .c-upload-image .c_btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-8);
+}
+.layout-box-2 form .c-upload-image .c_btn .c-button-1 {
+    border-radius: var(--radius-8);
+    background: var(--Light-Primary-50);
+    padding: var(--sp-8) var(--sp-12);
+    color: var(--Light_mode-Gray_Scale-100);
+    font-weight: 500;
+    text-transform: none;
+    font-size: var(--fs-14);
+    display: inline-flex;
+    gap: var(--sp-8);
+    box-shadow: none;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.layout-box-2 form .c-upload-image .c_btn .c-button-2 {
+    border-radius: 8px;
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+    padding: var(--sp-8) var(--sp-12);
+    color: var(--Light_mode-Gray_Scale-20);
+    background-color: #fff;
+    font-weight: 500;
+    text-transform: none;
+    font-size: var(--fs-14);
+    display: inline-block;
+    box-shadow: none;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+@media (max-width: 1447px) {
+    .layout-box-2 {
+        width: 100%;
+    }
+}
+@media (max-width: 684px) {
+    .layout-box-2 form .c-upload-image {
+        width: 60%;
+        flex-wrap: wrap;
+    }
+    .layout-box-2 form .c-upload-image .c_thumb {
+        width: 30%;
+    }
+}
+@media (max-width: 589px) {
+    .layout-box-2 form .c-upload-image .c_thumb {
+        width: 50%;
+    }
+}

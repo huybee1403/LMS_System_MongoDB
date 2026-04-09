@@ -1,0 +1,101 @@
+﻿.sidebar {
+    width: 20vw;
+    background-color: var(--Light_mode-Gray_Scale-100);
+    min-height: 100vh;
+    padding: var(--sp-32) var(--sp-16);
+}
+.sidebar img {
+    height: 32px;
+    margin-bottom: var(--sp-48);
+    margin-left: var(--sp-16);
+    cursor: pointer;
+}
+.sidebar .sidebar_inner ul li a:hover,
+.sidebar .sidebar_inner ul li.active a {
+    border-color: var(--Light-Primary-70);
+    background: var(#fafafa, linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%));
+    color: var(--Light-Primary-50);
+}
+.sidebar .sidebar_inner ul li a {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-8);
+    padding: var(--sp-12);
+    border-radius: var(--radius-8);
+    border: 1px solid transparent;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+.sidebar .sidebar_inner ul li a i {
+    color: #0f5484;
+}
+.sidebar .sidebar_inner ul li {
+    margin-bottom: var(--sp-16);
+    font-size: var(--fs-14);
+}
+.sidebar-close {
+    display: none;
+}
+@media (max-width: 1024px) {
+    .sidebar .sidebar_inner ul li a {
+        font-size: var(--fs-12);
+    }
+}
+@media (max-width: 991px) {
+    .sidebar.active {
+        opacity: 1;
+        pointer-events: visible;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s;
+        z-index: 9999;
+        background: rgba(91, 101, 110, 0.5);
+        backdrop-filter: blur(4px);
+        padding: 0;
+    }
+    .sidebar_inner {
+        width: 300px;
+        position: relative;
+        left: -100px;
+        transition: 0.3s;
+        transition-delay: 0.3s;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        background-color: var(--Light_mode-Gray_Scale-100);
+        height: 100vh;
+        padding: var(--sp-32) var(--sp-16);
+    }
+    .sidebar.active .sidebar_inner {
+        left: 0;
+        opacity: 1;
+        pointer-events: visible;
+    }
+    .sidebar .sidebar_inner ul li a {
+        font-size: var(--fs-14);
+    }
+    .sidebar-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .sidebar-close i {
+        color: rgb(204, 204, 204);
+    }
+}
+

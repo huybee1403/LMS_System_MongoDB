@@ -1,0 +1,152 @@
+.button-group {
+    display: flex;
+    gap: var(--sp-20);
+    align-items: center;
+    flex-wrap: wrap;
+}
+.button-group .salary_month {
+    display: flex;
+    gap: var(--sp-20);
+    align-items: center;
+    flex-wrap: wrap;
+}
+.button-group .salary_arrow {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-12);
+}
+.button-group .salary_arrow .arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--Light-Primary-70);
+    background-color: var(--Light_mode-Gray_Scale-90);
+    cursor: pointer;
+    border-radius: 50%;
+}
+.button-group .salary_arrow .arrow.disabled {
+    pointer-events: initial;
+    border-color: var(--Light_mode-Gray_Scale-80);
+    background-color: var(--Light_mode-Gray_Scale-100);
+    cursor: alias;
+}
+.button-group .salary_month h3 {
+    font-size: var(--fs-20);
+}
+.layout-filter .c-button-1 {
+    border-radius: var(--radius-8);
+    background: var(--Light-Primary-50);
+    padding: var(--sp-16) var(--sp-24) var(--sp-16);
+    color: var(--Light_mode-Gray_Scale-90);
+    font-weight: 500;
+    font-size: var(--fs-16);
+    display: inline-flex;
+    gap: var(--sp-8);
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+.modal_box .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+.modal_box .table-1 {
+    font-size: var(--fs-14);
+    min-width: 650px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--radius-8);
+    overflow: hidden;
+}
+.modal_box .table-1 thead {
+    background: var(--Light_mode-Gray_Scale-90);
+}
+.modal_box .table-1 th,
+.table-1 td {
+    font-weight: normal;
+    color: var(--Light_mode-Gray_Scale-40);
+    padding: var(--sp-20);
+    text-align: center;
+}
+.modal_box .salary_form {
+    width: 50%;
+    margin-left: auto;
+    margin-top: var(--sp-32);
+}
+.modal_box .salary_form .salary_input {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-8);
+    justify-content: flex-end;
+    margin-bottom: var(--sp-16);
+}
+.modal_box .salary_form .salary_input .c-form-border {
+    transition: border-color 0.5s ease-in-out;
+    border-radius: var(--radius-6);
+    background: var(--Light_mode-Gray_Scale-100);
+    cursor: pointer;
+    position: relative;
+}
+.modal_box .salary_form .salary_input .c-form-border span {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--Light_mode-Gray_Scale-40);
+    font-weight: 300;
+    z-index: 999;
+}
+.modal_box .salary_form .salary_input .c-form-border .c_input {
+    border: 0.5px solid var(--Light_mode-Gray_Scale-70);
+    padding: var(--sp-12);
+    transition: 0.5s;
+    height: 100%;
+    cursor: pointer;
+    border-radius: var(--radius-6);
+}
+.modal_box .salary_form .salary_input .c-form-border .c_input:disabled {
+    background: var(--Light_mode-Gray_Scale-90);
+}
+.modal_box .salary_input .c-form-border .c_input:focus {
+    outline: none;
+    border-color: var(--Light-Primary-50);
+}
+.modal_box .salary_form textarea {
+    border-radius: var(--radius-8);
+    border: none;
+    display: block;
+    padding: var(--sp-16);
+    width: 100%;
+    outline: none;
+    resize: vertical;
+    line-height: 1.6;
+}
+.modal_box .salary_total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: var(--sp-32);
+}
+
+.modal_box .salary_total i {
+    border-radius: var(--radius-8);
+    background: #dcf1ff;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: var(--Light-Primary-50);
+    text-align: center;
+    margin-right: var(--sp-8);
+}
+.modal_box .salary_total h3 {
+    color: var(--Light_mode-Gray_Scale-40);
+    font-weight: 400;
+    margin-right: var(--sp-3088);
+}
+.modal_box .salary_total h4 {
+    font-size: var(--fs-26);
+    font-weight: 900;
+    color: var(--Light-Primary-50);
+}

@@ -1,0 +1,98 @@
+.form_complete-profile {
+    width: 770px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light_mode-Gray_Scale-100);
+    border-radius: var(--radius-20);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form_complete-profile .form_complete-profile-right {
+    width: 85%; /* Đặt lại để form chiếm toàn bộ chiều rộng */
+}
+
+.form_complete-profile .right_logo {
+    width: 157px;
+    margin-bottom: var(--sp-28);
+    margin-top: var(--sp-32);
+}
+
+.form_complete-profile .right_form-title {
+    color: var(--Light_mode-Gray_Scale-5);
+    font-size: var(--fs-20);
+    font-weight: 600;
+    margin-bottom: var(--sp-24);
+}
+.form_complete-profile .right_form form label {
+    color: var(--Light_mode-Gray_Scale-5);
+    display: block;
+    margin-bottom: var(--sp-8);
+    margin-top: var(--sp-14);
+}
+
+.form_complete-profile .right_form form label.active {
+    color: var(--Light-Quaternary-50);
+}
+
+.form_complete-profile .right_form form input {
+    outline: none;
+    width: 100%;
+    padding: var(--sp-12) 0;
+    padding-left: var(--sp-12);
+    border-radius: var(--radius-6);
+    font-weight: 500;
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+}
+
+.form_complete-profile .right_form form input.active {
+    border: 1px solid var(--Light-Quaternary-50);
+}
+
+.form_complete-profile .right_form form .err {
+    font-size: var(--fs-12);
+    margin-top: var(--sp-8);
+    margin-bottom: var(--sp-16);
+    color: var(--Light-Quaternary-50);
+}
+
+.form_complete-profile .right_form form button {
+    width: 100%;
+    padding: var(--sp-12) 0;
+    border-radius: var(--radius-8);
+    background: var(--Light-Primary-50);
+    color: var(--Light_mode-Gray_Scale-100);
+    font-size: var(--fs-16);
+    font-weight: 500;
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .form_complete-profile {
+        width: 770px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form_complete-profile {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+    .form_complete-profile-right {
+        margin: 0;
+        padding-right: var(--sp-6);
+        width: 100%; /* Đảm bảo phần right chiếm 100% chiều rộng */
+    }
+    .form_complete-profile .right_form form {
+        width: 100%;
+    }
+    .form_complete-profile .right_form form input {
+        padding-left: var(--sp-6);
+    }
+}

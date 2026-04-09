@@ -1,0 +1,243 @@
+.layout {
+    display: flex;
+    gap: var(--sp-32);
+    padding-right: var(--sp-32);
+}
+.layout_content {
+    width: 80%;
+}
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: var(--fs-14);
+    font-weight: normal;
+}
+.pagination .pagination_number {
+    margin-right: var(--sp-12);
+    color: var(--Light_mode-Gray_Scale-40);
+}
+.pagination_number span:nth-child(2) {
+    margin: 0 var(--sp-8);
+}
+.pagination .pagination_number span:first-child,
+.pagination_arrow span {
+    margin: 0 var(--sp-4);
+    border-radius: var(--radius-8);
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    color: var(--Light_mode-Gray_Scale-40);
+}
+.pagination_arrow span {
+    cursor: pointer;
+    transition: 0.5s;
+}
+.pagination_arrow span:hover {
+    background-color: var(--Light_mode-Gray_Scale-90);
+}
+.disable {
+    cursor: not-allowed !important;
+    opacity: 0.3;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 9999;
+    background: rgba(91, 101, 110, 0.5);
+    backdrop-filter: blur(4px);
+    padding: 0;
+    overflow: auto;
+}
+.modal.active {
+    opacity: 1;
+}
+
+.modal .modal_box .modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.modal .modal_box {
+    position: relative;
+    max-width: 640px;
+    left: 50%;
+    pointer-events: none;
+    transform: translateX(-50%);
+    padding: var(--sp-32);
+    transition: 0.3s;
+    background-color: var(--Light_mode-Gray_Scale-100);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: var(--radius-14);
+}
+.modal.active .modal_box {
+    top: 4%;
+    pointer-events: visible;
+    transition-delay: 0.3s;
+}
+.modal .modal_box form label {
+    margin-bottom: var(--sp-8);
+    display: block;
+}
+.modal .modal_box form div {
+    margin-bottom: var(--sp-16);
+}
+
+.modal .modal_box form input {
+    outline: none;
+    width: 100%;
+    border: 0.5px solid var(--Light_mode-Gray_Scale-70);
+    padding: var(--sp-12);
+    transition: 0.5s;
+    border-radius: var(--radius-6);
+}
+.modal .modal_box form textarea {
+    width: 100%;
+    min-height: 160px;
+    padding: var(--sp-12);
+    resize: vertical;
+    outline: none;
+    border: 0.5px solid var(--Light_mode-Gray_Scale-70);
+    border-radius: var(--radius-6);
+    transition: 0.5s;
+}
+.modal .modal_box form input[readonly] {
+    background-color: var(--Light_mode-Gray_Scale-70);
+    pointer-events: none;
+}
+.modal .modal_box form input:focus {
+    border-color: var(--Light-Primary-50);
+    background: var(--Light_mode-Gray_Scale-100);
+    box-shadow: 0px 0px 2px 0px var(--Light-Primary-50);
+}
+.modal .modal_box form textarea:focus {
+    border-color: var(--Light-Primary-50);
+    background: var(--Light_mode-Gray_Scale-100);
+    box-shadow: 0px 0px 2px 0px var(--Light-Primary-50);
+}
+.modal .modal_box form select {
+    width: 100%;
+    cursor: pointer;
+    padding: var(--sp-12);
+    font-size: var(--fs-14);
+    border: 0.5px solid var(--Light_mode-Gray_Scale-70);
+    border-radius: var(--radius-6);
+    background-color: var(--Light_mode-Gray_Scale-100);
+    color: var(--Light_mode-Gray_Scale-20);
+    transition: all 0.3s ease;
+}
+
+.modal .modal_box form select:hover {
+    border-color: var(--Light-Primary-50);
+}
+
+/* Styling khi select có focus */
+.modal .modal_box form select:focus {
+    border-color: var(--Light-Primary-50);
+    outline: none;
+    background-color: var(--Light_mode-Gray_Scale-100);
+}
+.modal .modal_box form button {
+    margin-top: var(--sp-16);
+    border-radius: var(--radius-8);
+    background: var(--Light-Primary-50);
+    padding: var(--sp-10) var(--sp-24) var(--sp-12);
+    color: var(--Light_mode-Gray_Scale-100);
+    font-weight: 500;
+    text-transform: none;
+    font-size: var(--fs-16);
+    display: inline-flex;
+    gap: var(--sp-8);
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+.modal .modal_box form .err {
+    font-size: var(--fs-10);
+    margin-top: var(--sp-8);
+    color: var(--Light-Quaternary-50); /* Placeholder for $error-color */
+}
+
+.headline {
+    font-size: var(--fs-26);
+    font-weight: 400;
+    margin-bottom: var(--sp-32);
+    color: var(--Light-Primary-50);
+}
+.modal .modal_box .confirm_infor {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-8);
+    margin-bottom: var(--sp-16);
+}
+.modal .modal_box .confirm_infor h3 {
+    color: var(--Light_mode-Gray_Scale-40);
+}
+.modal .modal_box .confirm_infor i {
+    color: var(--Light-Quaternary-50);
+    font-size: var(--fs-26);
+}
+.modal .modal_box .confirm_button {
+    text-align: right;
+}
+.modal .modal_box .confirm_button .out-button {
+    border-radius: var(--radius-8);
+    margin-right: var(--sp-4);
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+    padding: var(--sp-8) var(--sp-12);
+    color: var(--Light_mode-Gray_Scale-20);
+    background-color: var(--Light_mode-Gray_Scale-100);
+    font-weight: 500;
+    font-size: var(--fs-14);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.modal .modal_box .confirm_button .delete-button {
+    border-radius: var(--radius-8);
+    border: none;
+    padding: var(--sp-8) var(--sp-12);
+    color: var(--Light_mode-Gray_Scale-90);
+    background-color: var(--Light-Primary-50);
+    font-weight: 500;
+    font-size: var(--fs-14);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+@media (max-width: 991px) {
+    .layout {
+        display: block;
+        padding: var(--sp-12);
+    }
+    .layout_content {
+        width: 100%;
+    }
+}

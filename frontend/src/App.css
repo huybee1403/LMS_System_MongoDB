@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #f6fbff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    /*-------COLOR-------*/
+    /* Màu xanh */
+    --Light-Primary-50: #52b8ff;
+    --Light-Primary-60: #75c6ff;
+    --Light-Primary-70: #97d4ff;
+    --Light-Primary-80: #bae3ff;
+    --Light-Primary-90: #dcf1ff;
+    --Light-Primary-95: #f6fbff;
+
+    /* Màu đen */
+    --Light_mode-Gray_Scale-5: #1a1a1a;
+    --Light_mode-Gray_Scale-10: #333333;
+    --Light_mode-Gray_Scale-20: #4d4d4d;
+    --Light_mode-Gray_Scale-30: #666666;
+    --Light_mode-Gray_Scale-40: #808080;
+    --Light_mode-Gray_Scale-70: #cccccc;
+    --Light_mode-Gray_Scale-80: #e6e6e6;
+    --Light_mode-Gray_Scale-90: #f6f6f6;
+    --Light_mode-Gray_Scale-95: #fafafa;
+    --Light_mode-Gray_Scale-100: #ffffff;
+
+    /* Màu xanh */
+    --Light-Seventh-50: #0bbe61;
+    --Light-Seventh-95: #f3fcf7;
+
+    /* Màu tím */
+    --Light-Ninth-50: #8e24aa;
+    --Light-Ninth-95: #f9f4fb;
+
+    /* Màu cam */
+    --Light-Tertiary-50: #f17e01;
+    --Light-Tertiary-95: #fef9f2;
+
+    /* Màu đỏ */
+    --Light-Quaternary-50: #f44336;
+    --Light-Quaternary-90: #fdd9d7;
+    --Light-Quaternary-95: #fef6f5;
+
+    /* Màu vàng */
+    --Light-Senary-50: #ffcf47;
+    --Light-Senary-90: #fff5da;
+    --Light-Senary-95: #fffdf6;
+
+    /*-------SPACING-------*/
+    --sp-4: 0.25rem;
+    --sp-6: 0.375rem;
+    --sp-8: 0.5rem;
+    --sp-10: 0.625rem;
+    --sp-12: 0.75rem;
+    --sp-14: 0.875rem;
+    --sp-16: 1rem;
+    --sp-18: 1.125rem;
+    --sp-20: 1.25rem;
+    --sp-24: 1.5rem;
+    --sp-28: 1.75rem;
+    --sp-30: 1.875rem;
+    --sp-32: 2rem;
+    --sp-36: 2.25rem;
+    --sp-40: 2.5rem;
+    --sp-48: 3rem;
+    --sp-64: 4rem;
+
+    /*-------FONT SIZE-------*/
+    --fs-10: 0.625rem;
+    --fs-12: 0.75rem;
+    --fs-14: 0.875rem;
+    --fs-16: 1rem;
+    --fs-20: 1.25rem;
+    --fs-24: 1.5rem;
+    --fs-26: 1.625rem;
+    --fs-34: 2.125rem;
+    --fs-48: 3rem;
+
+    /*-------RADIUS-------*/
+    --radius-4: 0.25rem;
+    --radius-6: 0.375rem;
+    --radius-8: 0.5rem;
+    --radius-12: 0.75rem;
+    --radius-14: 0.875rem;
+    --radius-16: 1rem;
+    --radius-20: 1.25rem;
+    --radius-24: 1.5rem;
+    --radius-32: 2rem;
+    --radius-36: 2.25rem;
+    --radius-48: 3rem;
+    --radius-64: 4rem;
+
+    /*-------SHADOW-------*/
+    --box-shadow-primary: 0px 2px 4px 0px rgba(0, 39, 65, 0.2);
+
+    /*-------LINE-HEIGHT-------*/
+    --line-height-16: 1rem;
+    --line-height-20: 1.25rem;
+    --line-height-22: 1.375rem;
+    --line-height-24: 1.5rem;
+    --line-height-32: 2rem;
+    --line-height-40: 2.5rem;
+    --line-height-52: 3.25rem;
+
+    /*-------LETTER SPACING-------*/
+    --letter-spacing-34: 0.0053125rem;
+    --letter-spacing-20: 0.001875rem;
+    --letter-spacing-18: 0.0016875rem;
+    --letter-spacing-16: 0.0125rem;
+    --letter-spacing-14: 0.00875rem;
+    --letter-spacing-16: 0.005rem;
+    --letter-spacing-12: 0.025rem;
+}

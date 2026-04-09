@@ -1,0 +1,102 @@
+.salary_form {
+    width: 50%;
+    margin-left: auto;
+    margin-top: var(--sp-32);
+}
+
+.salary_form .salary_input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-8);
+    justify-content: flex-end;
+    margin-bottom: var(--sp-16);
+}
+
+.salary_form .salary_input span {
+    white-space: nowrap;
+}
+
+/* input wrapper */
+.salary_form .salary_input .c-form-border {
+    transition: border-color 0.5s ease-in-out;
+    border-radius: var(--radius-6);
+    background: var(--Light_mode-Gray_Scale-100);
+    cursor: pointer;
+    position: relative;
+}
+
+/* VND */
+.salary_form .salary_input .c-form-border span {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--Light_mode-Gray_Scale-40);
+    font-weight: 300;
+    z-index: 1;
+}
+
+/* input */
+.salary_form .salary_input .c-form-border .c_input {
+    border: 0.5px solid var(--Light_mode-Gray_Scale-70);
+    padding: var(--sp-12) var(--sp-40) var(--sp-12) var(--sp-12);
+    transition: 0.5s;
+    height: 100%;
+    cursor: pointer;
+    border-radius: var(--radius-6);
+}
+
+.salary_form .salary_input .c-form-border .c_input:disabled {
+    background: var(--Light_mode-Gray_Scale-90);
+}
+
+.salary_form .salary_input .c-form-border .c_input:focus {
+    outline: none;
+    border-color: var(--Light-Primary-50);
+}
+
+/* ===== OTHER ===== */
+.salary_form textarea {
+    border-radius: var(--radius-8);
+    border: none;
+    display: block;
+    padding: var(--sp-16);
+    width: 100%;
+    outline: none;
+    resize: vertical;
+    height: 200px;
+    background: var(--Light_mode-Gray_Scale-90);
+    color: var(--Light_mode-Gray_Scale-40);
+}
+
+/* ===== TOTAL ===== */
+.salary_total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: var(--sp-32);
+}
+
+.salary_total i {
+    border-radius: var(--radius-8);
+    background: #dcf1ff;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: var(--Light-Primary-50);
+    text-align: center;
+    margin-right: var(--sp-8);
+}
+
+.salary_total h3 {
+    color: var(--Light_mode-Gray_Scale-40);
+    font-weight: 400;
+    margin-right: var(--sp-30);
+}
+
+.salary_total h4 {
+    font-size: var(--fs-26);
+    font-weight: 900;
+    color: var(--Light-Primary-50);
+}

@@ -1,0 +1,63 @@
+.layout-box .table-1 td .name {
+    font-size: var(--fs-16);
+    font-weight: 600;
+    color: var(--Light_mode-Gray_Scale-5);
+}
+.layout-box .table-1 td i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.layout-box .table-1 td i:hover {
+    color: var(--Light-Primary-50);
+}
+.layout-box .none_class {
+    font-size: var(--fs-14);
+    font-weight: 500;
+    color: var(--Light-Quaternary-50);
+    text-align: center;
+}
+.tab .tab-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-24);
+}
+.tab .tab-menu li {
+    position: relative;
+    padding: var(--sp-8) var(--sp-12);
+    border-radius: var(--radius-8);
+    font-size: var(--fs-14);
+    cursor: pointer;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hiệu ứng nền và màu chữ khi hover */
+.tab .tab-menu li:hover {
+    background-color: var(--Light_mode-Gray_Scale-90);
+    color: var(--Light-Primary-50);
+}
+.tab .tab-menu li.active {
+    background-color: var(--Light_mode-Gray_Scale-90);
+    color: var(--Light-Primary-50);
+}
+
+/* Thanh hiệu ứng ở dưới */
+.tab .tab-menu li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--Light-Primary-50);
+    transform: translateX(-50%) scaleX(0);
+    transition: 0.3s ease;
+}
+
+/* Khi hover, thanh bung ra từ giữa */
+.tab .tab-menu li:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+.tab .tab-menu li.active::after {
+    transform: translateX(-50%) scaleX(1);
+}

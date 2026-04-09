@@ -1,0 +1,157 @@
+.date-picker-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.hidden-date-input {
+    position: absolute;
+    bottom: -10%;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+.selected-date-display {
+    font-size: var(--fs-16);
+}
+.card-container {
+    background-color: var(--Light-Primary-90);
+    border-radius: var(--radius-8);
+    padding: var(--sp-16);
+    color: var(--Light_mode-Gray_Scale-10);
+    border: 1px solid var(--Light-Primary-50);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+.card-container:nth-child(n + 2) {
+    margin-top: var(--sp-16);
+}
+.card-container.canceled {
+    background: var(--Light-Quaternary-90);
+    border: 1px solid var(--Light-Quaternary-50);
+    color: var(--Light_mode-Gray_Scale-10);
+}
+.card-container.makeup {
+    background-color: var(--Light-Senary-90);
+    border: 1px solid var(--Light-Senary-50);
+    color: var(--Light_mode-Gray_Scale-10);
+}
+.card-container .card-headline {
+    font-size: var(--fs-16);
+    font-weight: 600;
+    margin-bottom: var(--sp-12);
+    color: var(--Light-Primary-50);
+}
+.card-container.canceled .card-headline {
+    color: var(--Light-Quaternary-50);
+}
+.card-container.makeup .card-headline {
+    color: var(--Light-Senary-50);
+}
+.card-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.class-legend {
+    display: flex;
+    gap: var(--sp-16);
+    margin-top: var(--sp-16);
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: var(--fs-14);
+    color: var(--Light_mode-Gray_Scale-10);
+}
+
+.legend-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-4);
+    margin-right: var(--sp-6);
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+}
+
+/* Màu tương ứng */
+.legend-color.normal {
+    background-color: var(--Light-Primary-90);
+    border: 1px solid var(--Light-Primary-50);
+}
+
+.legend-color.canceled {
+    background-color: var(--Light-Quaternary-90);
+    border: 1px solid var(--Light-Quaternary-50);
+}
+
+.legend-color.makeup {
+    background-color: var(--Light-Senary-90);
+    border: 1px solid var(--Light-Senary-50);
+}
+
+.substitute-tag {
+    font-size: var(--fs-12);
+    color: var(--Light-Quaternary-50);
+    font-weight: 500;
+    margin-left: var(--sp-4);
+}
+
+/* Lọc Ca Học */
+.shift-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-10);
+    margin-top: var(--sp-16);
+}
+
+.shift-filter button {
+    position: relative;
+    padding: var(--sp-8) var(--sp-16);
+    border: none;
+    border-radius: var(--radius-8);
+    background-color: var(--Light_mode-Gray_Scale-95);
+    color: var(--Light_mode-Gray_Scale-10);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    overflow: hidden;
+}
+
+/* Hover: đổi nền + chữ */
+.shift-filter button:hover {
+    background-color: var(--Light_mode-Gray_Scale-90);
+    color: var(--Light-Primary-50);
+}
+
+/* Thanh hiệu ứng chạy từ giữa ra */
+.shift-filter button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--Light-Primary-50);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+/* Khi hover: bung ra */
+.shift-filter button:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Nút đang được chọn (active) */
+.shift-filter button.active {
+    background-color: var(--Light-Primary-50);
+    color: var(--Light_mode-Gray_Scale-100);
+    border-color: var(--Light-Primary-50);
+}
+
+/* Khi active thì thanh luôn hiển thị */
+.shift-filter button.active::after {
+    transform: translateX(-50%) scaleX(1);
+}

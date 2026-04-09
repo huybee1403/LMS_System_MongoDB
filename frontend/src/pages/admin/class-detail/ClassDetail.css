@@ -1,0 +1,253 @@
+.headline-1 {
+    color: var(--Light-Primary-50);
+    font-size: var(--fs-34);
+    font-weight: 600;
+}
+.headline-1 span {
+    color: var(--Light_mode-Gray_Scale-5);
+}
+
+.attendance_scroll .attendance_table {
+    display: flex;
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+}
+.attendance_table .fixed-table {
+    border-collapse: collapse;
+    width: 550px;
+}
+.attendance_table .fixed-table thead,
+.attendance_table .fixed-table tbody {
+    border-right: 1px solid var(--Light_mode-Gray_Scale-70);
+    position: relative;
+    z-index: 111;
+    box-shadow: 10px 0 12px -5px rgb(0 0 0 / 5%);
+}
+.attendance_table .fixed-table thead {
+    background: var(--Light_mode-Gray_Scale-90);
+    padding: var(--sp-32) var(--sp-12);
+}
+.attendance_table .fixed-table .table_name {
+    width: 230px;
+}
+.attendance_table .fixed-table .table_name a {
+    font-weight: 500;
+}
+th,
+td {
+    padding: var(--sp-24) var(--sp-20);
+    text-align: center;
+}
+
+.active-day {
+    background-color: var(--Light-Primary-50) !important;
+    font-weight: bold;
+    font-size: var(--fs-14);
+    color: var(--Light_mode-Gray_Scale-100);
+}
+
+.attendance_table .scrollable-table {
+    overflow-x: auto;
+    width: calc(100vw - 540px);
+    cursor: grab;
+    white-space: nowrap;
+}
+
+.attendance_table .scrollable-table th,
+.attendance_table .scrollable-table td {
+    min-width: 90px;
+    max-width: 90px;
+}
+.present-color {
+    background: var(--Light_mode-Gray_Scale-95);
+    color: var(--Light_mode-Gray_Scale-40);
+}
+.cp-color {
+    background: var(--Light-Tertiary-50);
+    color: var(--Light_mode-Gray_Scale-100);
+}
+.absence-color {
+    background: var(--Light-Quaternary-50);
+    color: var(--Light_mode-Gray_Scale-100);
+}
+.attendance_table .scrollable-table th {
+    padding: var(--sp-18) var(--sp-12);
+}
+.attendance_table .scrollable-table th.role {
+    font-size: var(--fs-14);
+    background: var(--Light_mode-Gray_Scale-90);
+}
+.attendance_table .scrollable-table th.done,
+.attendance_table .scrollable-table td.done {
+    background-color: var(--Light-Seventh-50) !important;
+    color: var(--Light_mode-Gray_Scale-100);
+    font-size: var(--fs-14);
+}
+.attendance_table .scrollable-table th.active-day,
+.attendance_table .scrollable-table td.active-day {
+    position: relative;
+    background-color: var(--Light-Primary-50) !important;
+    color: var(--Light_mode-Gray_Scale-100);
+}
+.attendance_table .scrollable-table th.canceled-day,
+.attendance_table .scrollable-table td.canceled-day {
+    background-color: var(--Light-Quaternary-50) !important;
+    font-weight: bold !important;
+}
+
+.attendance_table .scrollable-table th.makeup-day,
+.attendance_table .scrollable-table td.makeup-day {
+    background-color: var(--Light-Senary-50) !important;
+    font-weight: bold !important;
+}
+.attendance_table .scrollable-table tfoot td {
+    padding: var(--sp-20);
+}
+.attendance_table .scrollable-table td {
+    position: relative;
+}
+
+.attendance_infor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--sp-12);
+}
+
+.attendance_infor li {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-12);
+    width: calc(100% / 3 - 12px);
+    font-size: var(--fs-14);
+}
+.attendance_infor li span {
+    font-weight: bold;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    background: var(--Light_mode-Gray_Scale-100);
+    color: initial;
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+    padding: var(--sp-6);
+    text-align: left;
+    border-radius: var(--radius-8);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 111;
+}
+
+.dropdown.is-active {
+    display: block;
+}
+.dropdown div {
+    padding: var(--sp-6);
+    cursor: pointer;
+    font-size: var(--fs-14);
+}
+.dropdown div:hover {
+    background-color: var(--Light_mode-Gray_Scale-95);
+}
+
+.present-color {
+    background: var(--Light-Primary-80);
+    color: var(--Light_mode-Gray_Scale-40);
+}
+.excused-color {
+    background: var(--Light-Tertiary-50);
+    color: var(--Light_mode-Gray_Scale-100);
+}
+.absent-color {
+    background: var(--Light-Quaternary-50);
+    color: var(--Light_mode-Gray_Scale-100);
+}
+.off-button {
+    display: none;
+    position: absolute;
+    background-color: var(--Light-Quaternary-50);
+    text-transform: capitalize;
+    color: var(--Light_mode-Gray_Scale-100);
+    border: none;
+    font-size: var(--fs-12);
+    cursor: pointer;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+.off-button.active {
+    display: block;
+}
+.off-button.active.canceled-off-button {
+    display: none;
+}
+
+.off-modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-10);
+}
+
+.button-1,
+.button-2 {
+    padding: var(--sp-10);
+    border-radius: var(--radius-8);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-1 {
+    background-color: #4ade80;
+    color: white;
+}
+.button-1:hover {
+    background-color: #22c55e;
+}
+
+.button-2 {
+    background-color: #3b82f6;
+    color: white;
+}
+.button-2:hover {
+    background-color: #2563eb;
+}
+
+.off-button.active:not(.disable):hover {
+    background-color: #c9e6fa;
+    color: red;
+}
+.box-infor {
+    border-radius: var(--radius-8);
+    padding: var(--sp-16);
+    border: 1px solid var(--Light_mode-Gray_Scale-70);
+}
+@media (max-width: 991px) {
+    .attendance_scroll {
+        max-width: 1000px;
+        overflow-x: scroll;
+    }
+    .attendance_table {
+        width: 1000px;
+    }
+    .attendance_table .fixed-table {
+        width: 500px;
+    }
+    .attendance_table .scrollable-table {
+        width: 600px;
+    }
+    .attendance_infor li {
+        width: calc(100% / 2 - 12px);
+        font-size: 12px;
+    }
+}
+@media (max-width: 575px) {
+    .attendance_infor li {
+        width: 100%;
+    }
+}
