@@ -13,7 +13,7 @@
 .sidebar .sidebar_inner ul li a:hover,
 .sidebar .sidebar_inner ul li.active a {
     border-color: var(--Light-Primary-70);
-    background: var(#fafafa, linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%));
+    background: var(--Light_mode-Gray_Scale-95, linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%));
     color: var(--Light-Primary-50);
 }
 .sidebar .sidebar_inner ul li a {
@@ -98,4 +98,3 @@
         color: rgb(204, 204, 204);
     }
 }
-

@@ -11,9 +11,9 @@ const env = {
     ACCESS_TOKEN_EXPIRES: process.env.ACCESS_TOKEN_EXPIRES || "15m",
     REFRESH_TOKEN_EXPIRES: process.env.REFRESH_TOKEN_EXPIRES || "7d",
 
-    NODE_ENV: process.env.NODE_ENV || "development",
+    NODE_ENV: process.env.NODE_ENV,
 
-    FRONTEND_URL: process.env.FRONTEND_URL || "http://localhost:5173",
+    FRONTEND_URL: process.env.FRONTEND_URL,
 };
 
 // 🔥 Validate biến môi trường bắt buộc
