@@ -4,6 +4,7 @@ const cors = require("cors");
 const env = require("./env");
 
 const app = express();
+app.set("trust proxy", 1);
 
 /* ========================
    MIDDLEWARE
