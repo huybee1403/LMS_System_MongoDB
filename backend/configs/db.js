@@ -1,12 +1,19 @@
 const mongoose = require("mongoose");
 const fs = require("fs");
 
-async function connectDB() {
-    await mongoose.connect(process.env.MONGO_URI, {
-        tlsCAFile: process.env.CA_FILE,
-    });
+const connectDB = async () => {
+    try {
+        await mongoose.connect(process.env.MONGO_URI, {
+            tls: true,
+            tlsCAFile: "/home/ec2-user/LMS_System_MongoDB/backend/certs/global-bundle.pem",
+            retryWrites: false,
+        });
 
-    console.log("✅ Connected to Amazon DocumentDB");
-}
+        console.log("✅ DocumentDB connected");
+    } catch (error) {
+        console.error("❌ MongoDB connection error:", error);
+        process.exit(1);
+    }
+};
 
 module.exports = connectDB;
